@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sitejsvh/test.phpmvc.sitesystemhub.com/
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp -R controllers $DEPLOYPATH
+    - /bin/cp -R database $DEPLOYPATH
+    - /bin/cp -R libs $DEPLOYPATH
+    - /bin/cp -R models $DEPLOYPATH
+    - /bin/cp -R views $DEPLOYPATH
