@@ -1,5 +1,5 @@
 <?php
-
+//data goes here...objects, etc
 class Vehicle
 {
     private $vehicle_id;

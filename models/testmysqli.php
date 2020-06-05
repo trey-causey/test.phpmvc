@@ -1,7 +1,7 @@
 <?php
 
-include ('config.inc.php');
-include ('../libs/PrintData.php');
+include('config.inc.php');
+include('../libs/PrintData.php');
 
 $link = mysqli_connect(MARIADB_HOST, MARIADB_USER, MARIADB_PASSWORD, MARIADB_NAME, MARIADB_PORT);
 
