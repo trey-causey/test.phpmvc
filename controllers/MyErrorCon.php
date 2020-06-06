@@ -2,7 +2,7 @@
 
 require_once ('libs/Controller.php');
 
-class MyError extends Controller
+class MyErrorCon extends Controller
 {
     public function IndexAction()
     {

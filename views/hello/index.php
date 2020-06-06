@@ -26,11 +26,11 @@ include ('views/partials/header1.php');
 <div class="row" >
     <div class="col-md-2">.col-md-2</div>
     <div class="col-md-8">
-        <h1><?php echo $this->hello ?></h1>
+        <h1></h1>
         <div class="row">
-            <div class="col-md-4">.col-md-4</div>
-            <div class="col-md-4">.col-md-4</div>
-            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4"><a href="http://localhost/test.phpmvc/Hello/showVehicle/2">test.phpmvc/Hello/index/2</div>
+            <div class="col-md-4"><a href="http://localhost/test.phpmvc/Hello/showVehicle/3">test.phpmvc/Hello/index/3</div>
+            <div class="col-md-4"><a href="http://localhost/test.phpmvc/Hello/showVehicle/4">test.phpmvc/Hello/index/4</div>
         </div>
         <div class="row">
             <div class="col-md-4">.col-md-4</div>
