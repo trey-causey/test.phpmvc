@@ -2,25 +2,35 @@
 
 require_once 'libs/Controller.php';
 include 'models/vehiclepdo.php';
+include_once 'libs/Vehicle.php';
+include 'libs/PrintData.php';
 
 class VehicleCon extends Controller
 {
     public function index($id = 0)
     {
         $this->view->hello ="Hello World from hello controller";
-        $this->view->render('views/hello/index.php');
+        $this->view->render('views/vehicle/index.php');
+
     }
 
-    public function showVehicle($id)
+    public function showVehicle($id = 0)
     {
-        //get vehicle id
-        $this->vehicle->setVehicleId($id);
-        //retrieve database row matching that id
+        //get vehicle id and create object based on id
+        $currentObj = constVehToPass($_REQUEST['vehicle_id']);
+        //$this->vehicle->setVehicleId($id);
+        //send constructed vehicle to the view object
+        $this->view->VIN = $currentObj->getVIN();
+        $this->view->YearModel = $currentObj->getYearModel();
+        $this->view->Make = $currentObj->getMake();
+        $this->view->Model = $currentObj->getModel();
+        $this->view->Mileage = $currentObj->getMileage();
+        $this->view->Model = $currentObj->getModel();
+        $this->view->SalePrice = $currentObj->getSalePrice();
+        $this->view->RetailPrice = $currentObj->getRetailPrice();
+        $this->view->RetailMinusSalesPrice = $currentObj->getRetailPriceMinusSalePrice();
 
-        //construct query string based on row
-
-        $this->view->hello ="Hello World from hello controller";
-        $this->view->render('views/hello/feature.php');
+        $this->view->render('views/vehicle/feature.php');
     }
 
     public function __construct()

@@ -1,7 +1,8 @@
 <?php
 
 require_once 'libs/View.php';
-require_once 'libs/Model.php';
+require_once 'libs/Vehicle.php';
+require_once 'libs/User.php';
 
 class Controller
 {
@@ -10,7 +11,7 @@ class Controller
         //construct the view
         $this->view = new View();
         //construct the vehicle object
-        $this->vehicle = new Vehicle();
+        //$this->vehicle = new Vehicle();
 
 
     }

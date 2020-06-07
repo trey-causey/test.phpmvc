@@ -25,12 +25,13 @@ class Bootstrap
 
             } else {
                 //default action
-                    $controller->Index();
+                    $controller->index();
+
             }
         } else {
             //called if root/folder does not exist
-            require_once('controllers/MyError.php');
-            $controllerName = 'MyError';
+            require_once('controllers/MyErrorCon.php');
+            $controllerName = 'MyErrorCon';
             $controller = new $controllerName;
             $controller->IndexAction();
         }

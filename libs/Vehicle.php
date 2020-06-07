@@ -2,18 +2,6 @@
 //data goes here...objects, etc
 class Vehicle
 {
-    private $vehicle_id;
-    private $VIN;
-    private $yearModel;
-    private $make;
-    private $model;
-    private $mileage;
-    private $stockNumber;
-    private $retailPrice;
-    private $salePrice;
-    private $retailPriceMinusSalePrice;
-    private $image;
-
     public function getVehicleId()
     {
         return $this->vehicle_id;
@@ -106,7 +94,8 @@ class Vehicle
 
     public function getRetailPriceMinusSalePrice()
     {
-        return $this->retailPriceMinusSalePrice;
+
+        return $this->retailPriceMinusSalePrice = ($this->retailPrice - $this->salePrice);
     }
 
     public function setRetailPriceMinusSalePrice($retailPriceMinusSalePrice): void
@@ -124,21 +113,31 @@ class Vehicle
         $this->image = $image;
     }
 
-
-//    public function __construct($vehicle_id,$VIN,$yearModel,$make,$model,$mileage,$stockNumber,$retailPrice,$salePrice,$retailPriceMinusSalePrice, $image = Array())
-//    {
-//        $this->vehicle_id = $vehicle_id;
-//        $this->VIN = $VIN;
-//        $this->yearModel = $yearModel;
-//        $this->make = $make;
-//        $this->model = $model;
-//        $this->mileage = $mileage;
-//        $this->stockNumber = $stockNumber;
-//        $this->retailPrice = $retailPrice;
-//        $this->salePrice = $salePrice;
-//        $this->retailPriceMinusSalePrice = $retailPriceMinusSalePrice;
-//        $this->image = $image;
-//    }
+    public function __construct($vehicle_id,$VIN,$yearModel,$make,$model,$mileage,$stockNumber,$retailPrice,$salePrice,$retailPriceMinusSalePrice, $image = Array())
+    {
+        $this->vehicle_id = $vehicle_id;
+        $this->VIN = $VIN;
+        $this->yearModel = $yearModel;
+        $this->make = $make;
+        $this->model = $model;
+        $this->mileage = $mileage;
+        $this->stockNumber = $stockNumber;
+        $this->retailPrice = $retailPrice;
+        $this->salePrice = $salePrice;
+        $this->retailPriceMinusSalePrice = $retailPriceMinusSalePrice;
+        $this->image = $image;
+    }
+    private $vehicle_id;
+    private $VIN;
+    private $yearModel;
+    private $make;
+    private $model;
+    private $mileage;
+    private $stockNumber;
+    private $retailPrice;
+    private $salePrice;
+    private $retailPriceMinusSalePrice;
+    private $image;
 
 
 

@@ -1,6 +1,6 @@
 <?php
 
-include '../database/config.inc.php';
+include 'config.inc.php';
 include '../libs/PrintData.php';
 #database access test
 
@@ -16,4 +16,5 @@ try{
 
 } catch(PDOException $e) {
     printf("We had a problem: %s\n", $e->getMessage());
+    die();
 }

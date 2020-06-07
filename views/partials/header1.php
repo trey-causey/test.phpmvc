@@ -1,3 +1,7 @@
+<?php
+$GLOBALS['loggedin'] = false;
+?>
+
 <nav class="navbar navbar-expand navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Vehicle Showcase</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,13 +14,21 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">New</a>
+                <a class="nav-link" href="http://localhost/test.phpmvc/VehicleCon/">New</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Used</a>
+                <a class="nav-link" href="http://localhost/test.phpmvc/VehicleCon/">Used</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <?php
+                    if ($GLOBALS['loggedin'] = true)
+                    {
+                        echo '<a class="nav-link" href="http://localhost/test.phpmvc/LoginCon/login/">Logoff</a>';
+                    } else
+                    {
+                        echo '<a class="nav-link" href="http://localhost/test.phpmvc/LoginCon/login/">Login</a>';
+                    }
+                ?>
             </li>
         </ul>
         <form class="form-inline my-2 my-md-0">

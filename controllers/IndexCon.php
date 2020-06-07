@@ -1,13 +1,12 @@
 <?php
 
 require_once 'libs/Controller.php';
-require_once 'models/Vehicle.php';
+//require_once 'models/Vehicle.php';
 
-class Index extends Controller
+class IndexCon extends Controller
 {
     public function index($id = 0)
     {
-        $vehicle = new Vehicle();
         $this->view->message = 'this is Index controller from index method' . $id;
         $this->view->render('views/index/index.php');
     }

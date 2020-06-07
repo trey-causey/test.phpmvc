@@ -1,18 +1,33 @@
 <?php
+include 'config.inc.php';
 
-include '../database/config.inc.php';
-include 'Vehicle.php';
+function constVehToPass($someId) {
 
-try{
-    $db = new PDO($dsn,MARIADB_USER,MARIADB_PASSWORD);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sth = $db->query("SELECT * FROM Vehicle");
-    $row = $sth->fetch(PDO::FETCH_ASSOC);
-    //var_dump($row);
-    while ($row = $sth->fetch(PDO::FETCH_ASSOC)){
-        PrintData::testPrint($row);
+    try {
+        //connect to db, grab row of vehicle matching the idea passed in
+        $db = new PDO(PDO_DSN, MARIADB_USER, MARIADB_PASSWORD);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $qString = $db->query("SELECT * FROM Vehicle WHERE vehicle_id = $someId");
+        $row = $qString->fetch(PDO::FETCH_ASSOC);
+        //construct the object with all relevant variables filled in
+        $testVehicleObject = new Vehicle(
+            $row['vehicle_id'],
+            $row['VIN'],
+            $row['yearModel'],
+            $row['make'],
+            $row['model'],
+            $row['mileage'],
+            $row['stockNumber'],
+            $row['retailPrice'],
+            $row['salesPrice'],
+            $row['retailMinusSalesPrice'],
+            $row['image']
+        );
+
+    } catch (PDOException $e) {
+        printf("We had a problem: %s\n", $e->getMessage());
+        die();
     }
-
-} catch(PDOException $e) {
-    printf("We had a problem: %s\n", $e->getMessage());
+    return $testVehicleObject;
 }
+
