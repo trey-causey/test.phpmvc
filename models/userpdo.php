@@ -16,25 +16,15 @@ function checkDbForUser($theUserTry) {
         {
             if($row['userpassword'] == $userTryPW)
             {
+                session_start();
+                $_SESSION['userID'] = $userTryUN;
                 return true;
             } else {
                 print "wrong PW";
             }
-
-
         } else {
             return false;
         }
-
-        //print_r($row);
-        //if($row['username'] == $un){}
-//        construct the object with all relevant variables filled in
-//        $dbUserObject = new User(
-//            $row['user_id'],
-//            $row['username'],
-//            $row['userpassword']
-
-//        );
 
     } catch (PDOException $e) {
         printf("There was no match: %s\n", $e->getMessage());

@@ -2,14 +2,6 @@
 
 class User
 {
-//    public function getUserId()
-//    {
-//        return $this->user_id;
-//    }
-//    public function setUserId($user_id): void
-//    {
-//        $this->user_id = $user_id;
-//    }
 
     public function getUsername()
     {
@@ -38,12 +30,12 @@ class User
 
     public function __construct($username, $userpassword)
     {
-        //$this->user_id = $user_id;
+        //$this->user_id = $user_id; not needed to make a user object
         $this->username = $username;
         $this->userpassword = $userpassword;
     }
 
-    //private $user_id;
+    //private $user_id; not needed to make a user object
     private $username;
     private $userpassword;
 

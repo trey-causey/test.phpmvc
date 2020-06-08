@@ -1,6 +1,6 @@
 <?php
 
-//connection info for the mysqli
+//connection info for the database
 define('MARIADB_USER','root');
 define('MARIADB_PASSWORD','Passw0rd!');
 define('MARIADB_HOST','localhost');

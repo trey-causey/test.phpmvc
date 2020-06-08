@@ -86,8 +86,7 @@ include ('views/partials/header1.php');
 
 
 
-    </div>
-
 </div>
+
 </body>
 </html>

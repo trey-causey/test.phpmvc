@@ -1,5 +1,5 @@
 <?php
-$GLOBALS['loggedin'] = false;
+//session_start();
 ?>
 
 <nav class="navbar navbar-expand navbar-dark bg-dark">
@@ -21,9 +21,10 @@ $GLOBALS['loggedin'] = false;
             </li>
             <li class="nav-item">
                 <?php
-                    if ($GLOBALS['loggedin'] = true)
+                    if (isset($_SESSION["userID"]))
                     {
                         echo '<a class="nav-link" href="http://localhost/test.phpmvc/LoginCon/login/">Logoff</a>';
+
                     } else
                     {
                         echo '<a class="nav-link" href="http://localhost/test.phpmvc/LoginCon/login/">Login</a>';
@@ -32,7 +33,8 @@ $GLOBALS['loggedin'] = false;
             </li>
         </ul>
         <form class="form-inline my-2 my-md-0">
-            <input class="form-control" type="text" placeholder="Search">
+            <input class="form-control" type="text" placeholder="search">
         </form>
+
     </div>
 </nav>

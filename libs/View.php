@@ -7,6 +7,7 @@ class View
 
     }
 
+    //used from youtube tutorial
     public function render($viewScript)
     {
         require($viewScript);

@@ -10,8 +10,7 @@ class Controller
     {
         //construct the view
         $this->view = new View();
-        //construct the vehicle object
-        //$this->vehicle = new Vehicle();
+
 
 
     }

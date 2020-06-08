@@ -3,19 +3,6 @@
 require_once('libs/Controller.php');
 include ('views/partials/header1.php');
 extract($_REQUEST);
-//print_r($_REQUEST);
-
-//if( isset($login) && $login=="admin" &&
-//    isset($password) && $password="guess" ) {
-//    session_start();
-//    $_SESSION['authorized'] = 'yes';
-//    header( "Location: http://localhost/test.phpmvc/VehicleCon/" );
-//    exit();
-//}
-
-//if(isset($login) && isset($password)) {
-//    header( "Location: http://localhost/test.phpmvc/LoginCon/logon/" );
-//}
 ?>
 <html>
 <head><title>Login from Login Controller</title>

@@ -1,6 +1,7 @@
 <?php
 
 class PrintData {
+    //print function for debugging
     public static function testPrint ($row) {
         printf(
             '<li>%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s</li>',

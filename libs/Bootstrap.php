@@ -2,6 +2,7 @@
 
 class Bootstrap
 {
+    //this routing structure borrowed heavily from youtube video.
     public function __construct()
     {
 
@@ -25,10 +26,13 @@ class Bootstrap
 
             } else {
                 //default action
-                    $controller->index();
-
+//                require_once('controllers/VehicleCon.php');
+//                $controllerName = 'VehicleCon';
+//                $controller = new $controllerName;
+                $controller->Index();
             }
         } else {
+
             //called if root/folder does not exist
             require_once('controllers/MyErrorCon.php');
             $controllerName = 'MyErrorCon';

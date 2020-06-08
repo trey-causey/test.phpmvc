@@ -9,16 +9,15 @@ class VehicleCon extends Controller
 {
     public function index($id = 0)
     {
-        $this->view->hello ="Hello World from hello controller";
+        session_start();
         $this->view->render('views/vehicle/index.php');
-
     }
 
     public function showVehicle($id = 0)
     {
+        session_start();
         //get vehicle id and create object based on id
         $currentObj = constVehToPass($_REQUEST['vehicle_id']);
-        //$this->vehicle->setVehicleId($id);
         //send constructed vehicle to the view object
         $this->view->VIN = $currentObj->getVIN();
         $this->view->YearModel = $currentObj->getYearModel();

@@ -1,7 +1,7 @@
 <?php
 
 require_once 'libs/Bootstrap.php';
-//require 'libs/fixed/header.php';
-
-//include 'libs/fixed/header.php';
+//the only job of this index file is to start the bootstrap router and dispatcher
 new Bootstrap();
+
+
