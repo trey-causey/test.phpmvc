@@ -3,7 +3,8 @@
 Run CompleteTestPHPMVCsql.sql file to create database, tables, and insert info
 
 As long as everything was cloned into a webroot folder, like htdocs, it should run with no issues...
-This does require the local mariadb instance to run on default port 3306
+This does require the local mariadb instance to run on default port 3306. The db creds are root/Passw0rd!; that was left 
+in place for simplicity. 
 
 Use the index.php at the root of the project to bootstrap the app...it will default to the main page panel
 
@@ -22,6 +23,7 @@ Error checking is in place to check for either username or password entry, and t
 Using more time I would've:
 Hashed the pw
 Loaded actual images instead of placeholders
+Used migrations in database management
 Placed on a live web-server. I'd like to still work on this part on my own time.
 
 Let me know if you have any questions/concerns. My # is 225-931-4555
